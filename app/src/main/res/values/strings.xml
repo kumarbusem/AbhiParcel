@@ -15,4 +15,12 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
     <string name="terms_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="item_type_weight"><![CDATA[Item type & Weight]]></string>
+    <string name="terms">By Requesting Delivery Boy I accept this package doesn\\\'t contain illegal/restricted items,
+        if illegal/restricted items are found by Sendfast Delivery Boy, they may report it to the law enforcement
+        authorities
+    </string>
 </resources>

@@ -14,21 +14,21 @@
         android:gravity="center_horizontal"
         android:orientation="vertical">
         <ImageView
-            android:layout_width="300sp"
-            android:layout_height="300sp"
+            android:layout_width="250sp"
+            android:layout_height="250sp"
             android:layout_marginBottom="30dp"
-        android:src="@drawable/welcome1"/>
+            android:src="@drawable/welcome1"/>
         <!--<com.mursaat.extendedtextview.AnimatedGradientTextView-->
-            <!--app:colors="@array/funny_colors"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginTop="50dp"-->
-            <!--android:text="Newsfeed"-->
-            <!--android:gravity="center"-->
-            <!--android:layout_gravity="center"-->
-            <!--android:textSize="27dp"-->
-            <!--app:customFont="AvenirNextLTProDemi.otf"-->
-            <!--android:textStyle="bold"-->
-            <!--android:layout_width="match_parent"/>-->
+        <!--app:colors="@array/funny_colors"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="50dp"-->
+        <!--android:text="Newsfeed"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:textSize="27dp"-->
+        <!--app:customFont="AvenirNextLTProDemi.otf"-->
+        <!--android:textStyle="bold"-->
+        <!--android:layout_width="match_parent"/>-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
             android:layout_marginTop="10dp"
             android:paddingLeft="@dimen/desc_padding"
             android:paddingRight="@dimen/desc_padding"
-            android:text="Here you can see latest news in pur campus and events updates and everything"
+            android:text="Temporary Image and TExt \n Temporary Image and TExt Temporary Image and TExt"
             android:textAlignment="center"
             android:textColor="#292929"
             android:textSize="14dp"/>

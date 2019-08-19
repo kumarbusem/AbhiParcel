@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorAccent">
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_margin="16sp"
+        android:src="@drawable/items_dialog_pic"
+        android:scaleType="fitXY"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item/Package Type"
+        android:textColor="#363636"
+        android:layout_gravity="center"
+        android:textSize="16sp"
+        android:layout_marginBottom="4sp">
+
+    </TextView>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30sp">
+        <CheckBox android:id="@+id/documents_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4sp"
+            android:text="   Documents | Books"/>
+        <CheckBox android:id="@+id/cloths_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   Clothes | Accessories"/>
+        <CheckBox android:id="@+id/electronics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   Electronics | Mobiles"/>
+        <CheckBox android:id="@+id/food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   Food | Flowers"/>
+        <CheckBox android:id="@+id/sports"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   Sports | other Equipment"/>
+        <CheckBox android:id="@+id/house"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   Household Items"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weight"
+        android:textColor="#363636"
+        android:layout_gravity="center"
+        android:textSize="16sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="4sp">
+
+    </TextView>
+    <RadioGroup
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30sp">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_weight1"
+            android:text="  below 1 Kg"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_weight2"
+            android:text="  1Kg - 5Kg"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_weight3"
+            android:text="  5Kg - 10Kg"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_weight4"
+            android:text="  more than 10 Kg"/>
+
+    </RadioGroup>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="30sp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:layout_marginLeft="50sp"
+        android:layout_marginRight="50sp"
+        android:id="@+id/itemtypeDone"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_margin="10sp"
+            android:layout_gravity="center"
+            android:textColor="#fff"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorAccent">
+
+    </LinearLayout>
+
+</LinearLayout>

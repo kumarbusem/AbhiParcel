@@ -14,8 +14,8 @@
         android:gravity="center_horizontal"
         android:orientation="vertical">
         <ImageView
-            android:layout_width="300sp"
-            android:layout_height="300sp"
+            android:layout_width="250sp"
+            android:layout_height="250sp"
             android:layout_marginBottom="30dp"
             android:src="@drawable/welcome4"/>
         <!--<com.mursaat.extendedtextview.AnimatedGradientTextView-->
@@ -48,7 +48,7 @@
             android:layout_marginTop="10dp"
             android:paddingLeft="@dimen/desc_padding"
             android:paddingRight="@dimen/desc_padding"
-            android:text="Academic notifications, special classes notifications, official campus news and messages from Lecturers and Administration will be here"
+            android:text="Temporary Image and TExt \n Temporary Image and TExt Temporary Image and TExt"
             android:textAlignment="center"
             android:textColor="@color/grey700"
             android:textSize="14dp"/>

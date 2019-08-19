@@ -3,6 +3,13 @@
           xmlns:tools="http://schemas.android.com/tools"
           package="com.sendfast.abhiparcel">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/app_logo"
@@ -11,13 +18,58 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activities.SelectCityActivity">
+        <activity android:name=".activities.OffersActivity"
+                  android:parentActivityName=".activities.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sendfast.abhiparcel.activities.HomeActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.TrackingActivity"
+            android:parentActivityName=".activities.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sendfast.abhiparcel.activities.HomeActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.HistoryActivity"
+            android:parentActivityName=".activities.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sendfast.abhiparcel.activities.HomeActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.PaymentsActivity"
+            android:parentActivityName=".activities.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sendfast.abhiparcel.activities.HomeActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.FormActivity"
+            android:parentActivityName=".activities.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sendfast.abhiparcel.activities.HomeActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:parentActivityName=".activities.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sendfast.abhiparcel.activities.HomeActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.SelectCityActivity"
+            android:parentActivityName=".activities.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sendfast.abhiparcel.activities.HomeActivity"/>
         </activity>
         <activity
             android:name=".activities.HomeActivity"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-
         <activity
             android:name=".activities.WelcomeActivity"
             android:theme="@style/CustomStatusBar">
@@ -31,6 +83,14 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA0VwhQFuXY0gVEGi2uj7civXG3RX-0fuY"/>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false"/>
     </application>
 
 </manifest>

@@ -9,10 +9,82 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_main"
     tools:context=".activities.HomeActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:weightSum="2"
+        android:id="@+id/type_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:layout_margin="15sp"
+            android:id="@+id/card_inside_city"
+            app:cardCornerRadius="10sp"
+            android:elevation="5sp"
+            app:cardElevation="5sp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:padding="10sp"
+                android:orientation="vertical"
+                android:id="@+id/layout_inside_city"
+                android:background="@color/colorAccent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="35sp"
+                    android:src="@drawable/inside_city_white"
+                    android:id="@+id/image_inside_city"
+                    android:layout_gravity="center"
+                    android:layout_height="35sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Intracity"
+                    android:id="@+id/text_inside_city"
+                    android:textColor="#fff"
+                    android:textSize="17sp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"/>
 
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:layout_margin="15sp"
+            app:cardCornerRadius="10sp"
+            android:elevation="5sp"
+            android:id="@+id/card_outside_city"
+            app:cardElevation="5sp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:padding="10sp"
+                android:orientation="vertical"
+                android:id="@+id/layout_outside_city"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="35sp"
+                    android:layout_gravity="center"
+                    android:id="@+id/image_outside_city"
+                    android:src="@drawable/express_delivery_icon"
+                    android:layout_height="35sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Intercity"
+                    android:textColor="#9C9C9C"
+                    android:textSize="17sp"
+                    android:gravity="center"
+                    android:id="@+id/text_outside_city"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/type_layout"
         android:elevation="6sp"
         android:id="@+id/main_card"
         app:cardCornerRadius="0sp"
@@ -21,13 +93,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25sp"
             android:orientation="vertical">
 
             <LinearLayout
                 android:id="@+id/pickupCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingBottom="15sp"
+                android:paddingTop="15sp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="6sp"
                 android:orientation="horizontal">
@@ -38,25 +111,39 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="20sp"
                     android:src="@drawable/green_dot_with_line"/>
-
-                <TextView
-                    android:id="@+id/pickup_text"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:layout_marginLeft="20sp"
                     android:layout_marginTop="6dp"
                     android:layout_marginBottom="6dp"
-                    android:maxLines="1"
-                    android:text="Pickup From"
-                    android:textColor="#282828"
-                    android:textSize="18sp"/>
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/pickup_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="Pickup From"
+                        android:textColor="#282828"
+                        android:textSize="18sp"/>
+                    <TextView
+                        android:id="@+id/pickup_location_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5sp"
+                        android:visibility="gone"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:text="Location / Address"
+                        android:textColor="#6B6B6B"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="2sp"
-                android:layout_marginTop="15sp"
-                android:layout_marginBottom="15sp"
                 android:background="#F3F3F3"
                 android:orientation="vertical">
 
@@ -66,6 +153,8 @@
                 android:id="@+id/destinationCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingTop="15sp"
+                android:paddingBottom="15sp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="6sp"
                 android:orientation="horizontal">
@@ -76,98 +165,72 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="20sp"
                     android:src="@drawable/destination_marker_select"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/destination_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="Delivery To"
+                        android:textColor="#282828"
+                        android:textSize="18sp"/>
+                    <TextView
+                        android:id="@+id/destination_location_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:layout_marginRight="5sp"
+                        android:visibility="gone"
+                        android:lines="1"
+                        android:text="Location / Address"
+                        android:textColor="#6B6B6B"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2sp"
+                android:background="#F3F3F3"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/item_type_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15sp"
+                android:paddingBottom="15sp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="6sp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20sp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20sp"
+                    android:src="@drawable/package_icon"/>
 
                 <TextView
-                    android:id="@+id/destination_text"
+                    android:id="@+id/item_type_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20sp"
                     android:layout_marginTop="6dp"
                     android:layout_marginBottom="6dp"
                     android:maxLines="1"
-                    android:text="Delivery to"
+                    android:text="@string/item_type_weight"
                     android:textColor="#282828"
                     android:textSize="18sp"/>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="2sp"
-                android:layout_marginTop="15sp"
-                android:layout_marginBottom="15sp"
-                android:background="#F3F3F3"
-                android:orientation="vertical">
-
-            </LinearLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:text="Pickup Date:"
-                android:layout_marginLeft="25sp"
-                android:textSize="13sp"
-                android:layout_marginBottom="15sp"
-                android:layout_height="wrap_content"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_marginLeft="25sp"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:layout_width="25sp"
-                    android:layout_gravity="center"
-                    android:backgroundTint="#292929"
-                    android:layout_marginRight="7sp"
-                    android:background="@drawable/calendar"
-                    android:layout_height="25sp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:text="29"
-                    android:textSize="25sp"
-                    android:textColor="#292929"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:text="th"
-                    android:textColor="#292929"
-                    android:gravity="top"
-                    android:layout_height="match_parent"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:text="Mon,"
-                    android:textSize="22sp"
-                    android:textColor="#292929"
-                    android:layout_marginLeft="15sp"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:text="July 2019"
-                    android:textSize="17sp"
-                    android:textColor="#292929"
-                    android:layout_marginLeft="10sp"
-                    android:layout_height="wrap_content"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="end"
-                    android:layout_height="wrap_content">
-                    <ImageView
-                        android:layout_width="24sp"
-                        android:layout_height="30sp"
-                        android:tint="#D51A1A"
-                        android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
-                        android:layout_marginRight="20sp"/>
-                </LinearLayout>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="5sp"
-                android:layout_marginTop="20sp"
-                android:layout_marginBottom="12sp"
-                android:background="#F7F7F7"
-                android:visibility="invisible"
-                android:orientation="vertical">
-
-            </LinearLayout>
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
@@ -217,10 +280,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:text="View all"
+        android:id="@+id/text_view_all_offers"
         app:layout_constraintBottom_toTopOf="@id/offers_card"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="17sp"
-        android:textSize="14sp"
+        android:textSize="17sp"
         android:textColor="#222222"
         android:layout_height="wrap_content"/>
     <android.support.v7.widget.CardView

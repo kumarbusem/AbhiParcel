@@ -1,10 +1,13 @@
 package com.sendfast.abhiparcel.activities;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -36,6 +39,7 @@ public class WelcomeActivity extends AppCompatActivity {
             launchHomeScreen();
             finish();
         }
+
 
         // Making notification bar transparent
 //        if (Build.VERSION.SDK_INT >= 21) {
@@ -93,7 +97,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
     private void addBottomDots(int currentPage) {
         dots = new TextView[layouts.length];
-                dotsLayout.removeAllViews();
+        dotsLayout.removeAllViews();
         for (int i = 0; i < dots.length; i++) {
             dots[i] = new TextView(this);
             dots[i].setText(Html.fromHtml("&#8226;"));
@@ -111,10 +115,8 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     private void launchHomeScreen() {
-
-            startActivity(new Intent(WelcomeActivity.this, HomeActivity.class));
-
-
+        prefManager.setFirstTimeLaunch(false);
+        startActivity(new Intent(WelcomeActivity.this, HomeActivity.class));
         finish();
     }
 
@@ -197,4 +199,5 @@ public class WelcomeActivity extends AppCompatActivity {
             container.removeView(view);
         }
     }
+
 }
